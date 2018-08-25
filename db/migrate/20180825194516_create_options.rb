@@ -1,7 +1,7 @@
 class CreateOptions < ActiveRecord::Migration[5.1]
   def change
     create_table :options do |t|
-      t.integer :seats
+      t.string :door_count
       t.string :transmission
       t.string :drivetrain
       t.string :fuel_type

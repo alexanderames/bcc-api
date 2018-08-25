@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180825194516) do
   end
 
   create_table "options", force: :cascade do |t|
-    t.integer "seats"
+    t.string "door_count"
     t.string "transmission"
     t.string "drivetrain"
     t.string "fuel_type"

@@ -1,5 +1,25 @@
 require 'rails_helper'
 
 RSpec.describe Make, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'has a valid factory' do
+    expect(build(:make)).to be_valid
+  end
+
+  let(:attributes) do
+    {
+      name: 'Toyota'
+    }
+  end
+
+  let(:make) { create(:make, **attributes) }
+
+  describe 'model validations' do
+    it { expect(make).to allow_value(attributes[:name]).for(:name) }
+    it { expect(make).to validate_presence_of(:name) }
+    it { expect(make).to validate_uniqueness_of(:name) }
+  end
+
+  describe 'model associations' do
+    it { expect(make).to have_many(:models) }
+  end
 end
