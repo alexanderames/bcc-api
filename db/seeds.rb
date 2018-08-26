@@ -9,7 +9,7 @@ end
 
 makes = Make.all
 
-# for each make, add 5 models
+# for each make a model
 makes.each_with_index { |make| make.models.create(name: Faker::Vehicle.model(make.name)) }
 
 # create a vehicle with corresponding make
@@ -24,7 +24,7 @@ makes.each { |make|
 
 models = Model.all
 
-# make options for each model
+# create options for each model
 models.each do |model|
   Option.create(
     model_id: model.id,
