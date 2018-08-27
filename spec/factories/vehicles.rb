@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :vehicle do
-    vin { 'Faker::Vehicle.vin' }
-    year { 'Faker::Vehicle.year' }
-    plate_state { 'Faker::Address.state' }
+    sequence(:vin) { |n| "1HGBH41JXMN10918#{n}" }
+    year { rand(2010..2018) }
+    plate_state { 'CO' }
 
     make
   end
