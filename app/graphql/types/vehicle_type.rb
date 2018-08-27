@@ -6,6 +6,6 @@ module Types
     field :id, !types.ID
     field :vin, !types.String
     field :year, types.Int
-    field :plateState, types.String
+    field :plateState, types.String, property: :plate_state
   end
 end
