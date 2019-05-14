@@ -8,6 +8,6 @@ class Make < ApplicationRecord
   private
 
   def notify_subscriber_of_addition
-    GraphqlRailsApiSchema.subscriptions.trigger("newMake", {}, self)
+    BlinkerChallengeApiSchema.subscriptions.trigger('newMake', {}, self)
   end
 end

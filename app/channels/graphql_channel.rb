@@ -13,7 +13,7 @@ class GraphqlChannel < ApplicationCable::Channel
       channel: self,
     }
 
-    result = GraphqlRailsApiSchema.execute({
+    result = BlinkerChallengeApiSchema.execute({
       query: query,
       context: context,
       variables: variables,
@@ -36,7 +36,7 @@ class GraphqlChannel < ApplicationCable::Channel
 
   def unsubscribed
     @subscription_ids.each { |sid|
-      GraphqlRailsApiSchema.subscriptions.delete_subscription(sid)
+      BlinkerChallengeApiSchema.subscriptions.delete_subscription(sid)
     }
   end
 
