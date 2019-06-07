@@ -22,11 +22,12 @@ gem 'rack-cors'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
+gem 'rb-readline'
 
 group :development, :test do
   gem 'factory_bot'
   gem 'factory_bot_rails'
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug'
   gem 'pry-rails'
 end
 

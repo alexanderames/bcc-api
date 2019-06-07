@@ -21,5 +21,7 @@ RSpec.describe Make, type: :model do
 
   describe 'model associations' do
     it { expect(make).to have_many(:models) }
+    it { expect(make).to accept_nested_attributes_for(:models) }
+    it { expect(make).to accept_nested_attributes_for(:vehicles) }
   end
 end

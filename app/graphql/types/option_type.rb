@@ -4,7 +4,7 @@ module Types
     description 'vehicle option type'
 
     field :id, !types.ID
-    field :doorCount, types.String, property: :door_count
+    field :doorCount, types.Int, property: :door_count
     field :transmission, types.String
     field :drivetrain, types.String
     field :fuelType, types.String, property: :fuel_type

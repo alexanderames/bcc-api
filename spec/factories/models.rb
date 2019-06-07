@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :model do
-    sequence(:name) { |n| "Faker::Vehicle.model#{n}" }
+    name { Faker::Vehicle.model }
 
     make
   end

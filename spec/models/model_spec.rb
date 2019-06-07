@@ -23,5 +23,6 @@ RSpec.describe Model, type: :model do
 
   describe 'model associations' do
     it { expect(model).to belong_to(:make) }
+    it { expect(model).to accept_nested_attributes_for(:options) }
   end
 end

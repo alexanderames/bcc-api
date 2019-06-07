@@ -1,7 +1,7 @@
 require 'faker'
 
 # create 5 makes
-5.times do
+10.times do
   Make.create(
     name: Faker::Vehicle.make
   )

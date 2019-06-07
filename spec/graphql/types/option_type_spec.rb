@@ -6,7 +6,7 @@ RSpec.describe Types::OptionType do
   end
 
   it 'has a :doorCount field of String type' do
-    expect(subject).to have_field(:doorCount).that_returns(types.String)
+    expect(subject).to have_field(:doorCount).that_returns(types.Int)
   end
 
   it 'has a :color field of String type' do
